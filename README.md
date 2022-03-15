@@ -1,13 +1,4 @@
-# YNOV NANTES - B2 - 2122
-
-## exemple
-- Catégories : CRUD - Create, Read, Update, Delete
-
--> 1 table en BDD - ```php artisan make:migration create_categories_table```
--> 1 modèle pour gérer les catégories en BDD
--> 1 contrôleur spécifique pour les catégories
--> les vues nécessaires
--> les routes nécessaires
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 ## Projet
 
@@ -47,5 +38,17 @@ Les temps 1, 2 et 3 sont à gérer en mode "backoffice", c'est-à-dire, ajoutabl
 #### Temps 5
 - présentation propre de tous les cocktails en front (partie visible sans connexion)
 
-### Groupes
+#### exemple
+- Catégories : CRUD - Create, Read, Update, Delete
+
+-> 1 table en BDD - ```php artisan make:migration create_categories_table```
+-> 1 modèle pour gérer les catégories en BDD
+-> 1 contrôleur spécifique pour les catégories
+-> les vues nécessaires
+-> les routes nécessaires
+
+### Groupe
 - YASSER Youssouf mohamed - LEROY Mathias - Enzo Pinot
+
+***
+*YNOV NANTES - B2 - 2122*
