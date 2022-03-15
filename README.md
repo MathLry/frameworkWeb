@@ -1,64 +1,51 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# YNOV NANTES - B2 - 2122
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## exemple
+- Catégories : CRUD - Create, Read, Update, Delete
 
-## About Laravel
+-> 1 table en BDD - ```php artisan make:migration create_categories_table```
+-> 1 modèle pour gérer les catégories en BDD
+-> 1 contrôleur spécifique pour les catégories
+-> les vues nécessaires
+-> les routes nécessaires
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Projet
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Énoncé
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Vous allez devoir faire un site web permettant de gérer des cocktails : 
 
-## Learning Laravel
+#### Temps 1
+- Gérer une liste de sirops
+    - nom
+- Gérer une liste de softs (= sans alcool)
+    - nom
+- Gérer une liste des types d'alcools (ex: rhum, whiskey, vodka, etc...)
+    - nom
+- Gérer une liste de fruits
+    - nom
+    - image
+- Gérer une liste de verres (= types de verres)
+    - nom
+    - image
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### Temps 2
+- Gérer une liste d'alcools (ex: greygoose, smirnoff...)
+    - nom
+    - degré
+    - type d'alcool (relation vers la table "types d'alcools")
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Temps 3
+- gérer une liste de cocktails, qui seront in fine, une composition de tous les éléments cités ci-dessus
 
-## Laravel Sponsors
+#### ATTENTION 
+Les temps 1, 2 et 3 sont à gérer en mode "backoffice", c'est-à-dire, ajoutable a partir d'une genre de panel "admin"
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### Temps 4
+- Mettre en place l'authentification (login/register) pour ne laisser l'accès qu'aux membres identifiés pour le panel admin
 
-### Premium Partners
+#### Temps 5
+- présentation propre de tous les cocktails en front (partie visible sans connexion)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Groupes
+- YASSER Youssouf mohamed - LEROY Mathias - Enzo Pinot
