@@ -28,5 +28,21 @@ class AlcoolListController extends Controller
        return redirect()->route('listAlcool.index');
         
     }
+    public function delete($id){
+        $list_alcools = AlcoolList::destroy($id);
+
+        return redirect()->route('listAlcool.index');
+    }
+    public function edit($id){
+        $list_alcool = AlcoolList::findOrFail($id);
+        return view('listAlcool.edit',compact('list_alcool'));
+    }
+    public function update(Request $request,$id){
+        $list_alcool = AlcoolList::findOrFail($id);
+        $list_alcool-> name=$request->get('name');
+        $list_alcool->save();
+        return redirect()->route('listAlcool.index');
+
+    }
 
 }

@@ -67,3 +67,18 @@ Route::post(
     '/alcool/list',
    [AlcoolListController::class, 'store']
 )->name('listAlcool.store');
+
+Route::get(
+    '/alcool/list/{id}/delete',
+   [AlcoolListController::class, 'delete']
+)->name('listAlcool.delete');
+
+Route::get(
+    '/alcool/list/{id}/edit',
+   [AlcoolListController::class, 'edit']
+)->name('listAlcool.edit');
+
+Route::put(
+    '/alcool/list/{id}/update',
+   [AlcoolListController::class, 'update']
+)->name('listAlcool.update');

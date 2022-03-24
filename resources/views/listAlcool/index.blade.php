@@ -32,8 +32,8 @@
                 <td>{{ $list_alcool->updated_at}}</td>
                 
                 <td>
-                    <a href="#">Modifier</a>
-                    <a class="delete" href="#"> Supprimer</a>
+                    <a href="{{ route('listAlcool.edit',$list_alcool->id)}}">Modifier</a>
+                    <a class="delete" href="{{ route('listAlcool.delete',$list_alcool->id)}}"> Supprimer</a>
                 </td>
             </tr>
                 @endforeach

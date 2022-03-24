@@ -8,20 +8,14 @@
     <h1>Alcool</h1>
     <a href="{{ route('home') }}">Retour à l'accueil</a>
     <a href="{{ route('listAlcool.index') }}">Retour à la liste des alcools</a>
-   <h2>Ajouter une boisson </h2>
+   <h2> Modifier l'alcool</h2>
    
-   <form action="{{ route('listAlcool.store') }}" method="POST" >
-     @csrf  
-    <input type="text" name="name" placeholder="name">
-    <input type="text" name="degre" placeholder="degre">
-   
-<SELECT name="alcool_type" size="1">
-    @foreach($type_alcools as $type_alcool)
-<OPTION>{{ $type_alcool->name}}
-   @endforeach
-</SELECT>
- 
-    <button type="submit">Ajouter</button>
+   <form action="{{ route('listAlcool.update',$list_alcool->id) }}" method="POST" >
+     @csrf
+     @method("PUT")
+    <input type="text" name="name" placeholder="name" value="{{$list_alcool->name}}">
+    <input type="text" name="degre" placeholder="degre" value="{{$list_alcool->degre}}">
+    <button type="submit">Modifier</button>
 
 
    </form>
