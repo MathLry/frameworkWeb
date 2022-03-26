@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< Updated upstream
+=======
+use App\Http\Controllers\FruitsController;
+use App\Http\Controllers\GlassesController;
+use App\Http\Controllers\ImageUploadController;
+>>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +21,68 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+<<<<<<< Updated upstream
 });
+=======
+})->name('home');
+
+Route::get(
+    '/fruits',
+    [FruitsController::class, 'index']
+)->name('fruits.index');
+
+Route::get(
+    '/fruits/create',
+    [FruitsController::class, 'create']
+)->name('fruits.create');
+
+Route::get(
+    '/fruits/{id}/edit',
+    [FruitsController::class, 'edit']
+)->name('fruits.edit');
+
+Route::put(
+    '/fruits/{id}/update',
+    [FruitsController::class, 'update']
+)->name('fruits.update');
+
+Route::delete(
+    '/fruits',
+    [FruitsController::class, 'delete']
+)->name('fruits.delete');
+
+Route::post(
+    '/fruits',
+    [FruitsController::class, 'store']
+)->name('fruits.store');
+
+Route::get(
+    '/glasses',
+    [GlassesController::class, 'index']
+)->name('glasses.index');
+
+Route::get(
+    '/glasses/create',
+    [GlassesController::class, 'create']
+)->name('glasses.create');
+
+Route::get(
+    '/glasses/{id}/edit',
+    [GlassesController::class, 'edit']
+)->name('glasses.edit');
+
+Route::put(
+    '/glasses/{id}/update',
+    [GlassesController::class, 'update']
+)->name('glasses.update');
+
+Route::delete(
+    '/glasses',
+    [GlassesController::class, 'delete']
+)->name('glasses.delete');
+
+Route::post(
+    '/glasses',
+    [GlassesController::class, 'store']
+)->name('glasses.store');
+>>>>>>> Stashed changes
