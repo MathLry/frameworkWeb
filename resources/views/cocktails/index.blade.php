@@ -11,14 +11,16 @@
 <body>
     <form method="post">
         <h2>Les Softs</h2>
-
+            @csrf 
             <tbody>
 
             @if (!is_null($softs) && !empty($softs))
-                
+               
                     @foreach ($softs as $soft)
-                    <input type="checkbox" name="couleur[]" value="{{ $soft->name}}">{{ $soft->name}}<br>
+                    <input type="checkbox" name="choix[]" value="{{ $soft->name}}">{{ $soft->name}}<br>
                     @endforeach
+                    <input type="submit"name="submit" id="button" value="ok" />
+                
                     
             @endif
             </tbody>
@@ -27,7 +29,7 @@
             <tbody>
             @if (!is_null($syrups) && !empty($syrups))
                     @foreach ($syrups as $syrup)
-                <input type="checkbox" name="couleur[]" value="{{ $syrup->name}}">{{ $syrup->name}}<br>
+                <input type="checkbox" name="choix[]" value="{{ $syrup->name}}">{{ $syrup->name}}<br>
                 
                     @endforeach
             @endif
@@ -37,7 +39,7 @@
             <tbody>
             @if (!is_null($fruits) && !empty($fruits))
                     @foreach ($fruits as $fruit)
-                <input type="checkbox" name="couleur[]" value="{{ $fruit->name}}">{{ $fruit->name}}<br>
+                <input type="checkbox" name="choix[]" value="{{ $fruit->name}}">{{ $fruit->name}}<br>
                 
                     @endforeach
             @endif
@@ -46,7 +48,7 @@
             <tbody>
             @if (!is_null($glasses) && !empty($glasses))
                     @foreach ($glasses as $glasse)
-                <input type="checkbox" name="couleur[]" value="{{ $glasse->name}}">{{ $glasse->name}}<br>
+                <input type="checkbox" name="choix[]" value="{{ $glasse->name}}">{{ $glasse->name}}<br>
                 
                     @endforeach
             @endif
@@ -55,7 +57,7 @@
             <tbody>
             @if (!is_null($types_Of_Alcohol) && !empty($types_Of_Alcohol))
                     @foreach ($types_Of_Alcohol as $typeOfAlcohol)
-                <input type="checkbox" name="couleur[]" value="{{ $typeOfAlcohol->name}}">{{ $typeOfAlcohol->name}}<br>
+                <input type="checkbox" name="choix[]" value="{{ $typeOfAlcohol->name}}">{{ $typeOfAlcohol->name}}<br>
                 
                     @endforeach
             @endif
@@ -63,3 +65,12 @@
     </form>
 </body>
 </html>
+<?php
+if(isset($_POST['submit'])){
+    if(!empty($_POST['choix'])){ 
+        echo "Ingredient Choisis : <br/>" ;
+        foreach($_POST['choix'] as $value){
+            echo $value. '<br/>';
+        }
+    }
+} ?>

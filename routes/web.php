@@ -31,7 +31,7 @@ use App\Http\Controllers\SyrupsController;
 
 
 //Softs Type of Routes
-Route::get(
+Route::any(
     '/cocktails',
    [SoftsController::class, 'index']
 )->name('cocktails.index');
