@@ -1,6 +1,78 @@
 # Release Notes for 9.x
 
-## [Unreleased](https://github.com/laravel/framework/compare/v9.3.1...9.x)
+## [Unreleased](https://github.com/laravel/framework/compare/v9.5.1...9.x)
+
+## [v9.5.1](https://github.com/laravel/framework/compare/v9.5.0...v9.5.1) - 2022-03-15
+
+### Reverted
+
+- Revert "Fix the guard instance used." ([#41491](https://github.com/laravel/framework/pull/41491))
+
+## [v9.5.0](https://github.com/laravel/framework/compare/v9.4.1...v9.5.0) - 2022-03-15
+
+### Added
+
+- Added callback support on implode Collection method. ([#41405](https://github.com/laravel/framework/pull/41405))
+- Added `Illuminate/Filesystem/FilesystemAdapter::assertDirectoryEmpty()` ([#41398](https://github.com/laravel/framework/pull/41398))
+- Implement email "metadata" for SesTransport ([#41422](https://github.com/laravel/framework/pull/41422))
+- Make assertPath() accepts Closure ([#41409](https://github.com/laravel/framework/pull/41409))
+- Added callable support to operatorForWhere on Collection ([#41414](https://github.com/laravel/framework/pull/41414), [#41424](https://github.com/laravel/framework/pull/41424))
+- Added partial queue faking ([#41425](https://github.com/laravel/framework/pull/41425))
+- Added --name option to schedule:test command ([#41439](https://github.com/laravel/framework/pull/41439))
+- Define `Illuminate/Database/Eloquent/Concerns/HasRelationships::newRelatedThroughInstance()` ([#41444](https://github.com/laravel/framework/pull/41444))
+- Added `Illuminate/Support/Stringable::wrap()` ([#41455](https://github.com/laravel/framework/pull/41455))
+- Adds "freezeTime" helper for tests ([#41460](https://github.com/laravel/framework/pull/41460))
+- Allow for callables with beforeSending in`Illuminate/Http/Client/PendingRequest.php::runBeforeSendingCallbacks()` ([#41489](https://github.com/laravel/framework/pull/41489))
+
+### Fixed
+
+- Fixed deprecation warnings from route:list when filtering on name or domain ([#41421](https://github.com/laravel/framework/pull/41421))
+- Fixes HTTP::pool response when a URL returns a null status code ([#41412](https://github.com/laravel/framework/pull/41412))
+- Fixed recaller name resolution in `Illuminate/Session/Middleware/AuthenticateSession.php` ([#41429](https://github.com/laravel/framework/pull/41429))
+- Fixed the guard instance used in /Illuminate/Session/Middleware/AuthenticateSession.php ([#41447](https://github.com/laravel/framework/pull/41447))
+- Fixed route:list --except-vendor hiding Route::view() & Route::redirect() ([#41465](https://github.com/laravel/framework/pull/41465))
+
+### Changed
+
+- Add null typing to connection property in \Illuminate\Database\Eloquent\Factories\Factory ([#41418](https://github.com/laravel/framework/pull/41418))
+- Update reserved names in GeneratorCommand ([#41441](https://github.com/laravel/framework/pull/41441))
+- Redesign php artisan schedule:list Command ([#41445](https://github.com/laravel/framework/pull/41445))
+- Extend eloquent higher order proxy properties ([#41449](https://github.com/laravel/framework/pull/41449))
+- Allow passing named arguments to dynamic scopes ([#41478](https://github.com/laravel/framework/pull/41478))
+- Throw if tag is passed but is not supported in `Illuminate/Encryption/Encrypter.php` ([#41479](https://github.com/laravel/framework/pull/41479))
+- Update PackageManifest::$vendorPath initialisation for cases, when composer vendor dir is not in project director ([#41463](https://github.com/laravel/framework/pull/41463))
+
+## [v9.4.1](https://github.com/laravel/framework/compare/v9.4.0...v9.4.1) - 2022-03-08
+
+### Fixed
+
+- Fixed version of laravel
+
+## [v9.4.0](https://github.com/laravel/framework/compare/v9.4.0...v9.4.0) - 2022-03-08
+
+### Added
+
+- Support modifying a char column type ([#41320](https://github.com/laravel/framework/pull/41320))
+- Add "Mutex" column to 'schedule:list' command ([#41338](https://github.com/laravel/framework/pull/41338))
+- Allow eloquent whereNot() and orWhereNot() to work on column and value ([#41296](https://github.com/laravel/framework/pull/41296))
+- Allow VerifyCsrfToken's CSRF cookie to be extended ([#41342](https://github.com/laravel/framework/pull/41342))
+- Added `soleValue()` to query builder ([#41368](https://github.com/laravel/framework/pull/41368))
+- Added `lcfirst()` to `Str` and `Stringable` ([#41384](https://github.com/laravel/framework/pull/41384))
+- Added retryUntil method to queued mailables ([#41393](https://github.com/laravel/framework/pull/41393))
+
+### Fixed
+
+- Fixed middleware sorting for authenticating sessions ([50b46db](https://github.com/laravel/framework/commit/50b46db563e11ba52a53e3046c23e92878aed395))
+- Fixed takeUntilTimeout method of LazyCollection ([#41354](https://github.com/laravel/framework/pull/41354), [#41370](https://github.com/laravel/framework/pull/41370))
+- Fixed directory for nested markdown files for mailables ([#41366](https://github.com/laravel/framework/pull/41366))
+- Prevent serializing default values of queued jobs ([#41348](https://github.com/laravel/framework/pull/41348))
+- Fixed get() and head() in `Illuminate/Http/Client/PendingRequest.php` ([a54f481](https://github.com/laravel/framework/commit/a54f48102deea2864071e510172fe0b22a1c1d5a))
+
+### Changed
+
+- Don't use global tap helper ([#41326](https://github.com/laravel/framework/pull/41326))
+- Allow chaining of `Illuminate/Console/Concerns/InteractsWithIO::newLine` ([#41327](https://github.com/laravel/framework/pull/41327))
+- set destinations since bcc missing from raw message in Mail SesTransport ([8ca43f4](https://github.com/laravel/framework/commit/8ca43f4c2a531ff9d28b86a7e366eef8adf8de84))
 
 ## [v9.3.1](https://github.com/laravel/framework/compare/v9.3.0...v9.3.1) - 2022-03-03
 
