@@ -14,4 +14,12 @@ class SyrupsController extends Controller
          
         return view("cocktails.index", compact('syrups'));
     }
+    public function store(Request $request){
+        dd($request->get('choix[]'));
+    //    $type_alcools = new Alcool();
+    //    $type_alcools->name = $request->get('name');
+    //    $type_alcools->save();
+    //    return redirect()->route('alcools.index');
+        
+    }
 }

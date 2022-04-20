@@ -35,6 +35,10 @@ Route::any(
     '/cocktails',
    [SoftsController::class, 'index']
 )->name('cocktails.index');
+Route::any(
+    '/cocktails/store',
+   [SoftsController::class, 'store']
+)->name('cocktails.store');
  
 
 // Alcool Type of Routes

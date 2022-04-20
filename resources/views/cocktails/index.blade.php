@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form method="post">
+    <form method="post" action="{{ route('cocktails.store')}}">
         <h2>Les Softs</h2>
             @csrf 
             <tbody>
@@ -65,12 +65,3 @@
     </form>
 </body>
 </html>
-<?php
-if(isset($_POST['submit'])){
-    if(!empty($_POST['choix'])){ 
-        echo "Ingredient Choisis : <br/>" ;
-        foreach($_POST['choix'] as $value){
-            echo $value. '<br/>';
-        }
-    }
-} ?>
