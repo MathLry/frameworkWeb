@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlcoolsController;
 use App\Http\Controllers\AlcoolListController;
+use App\Http\Controllers\SoftsController;
+use App\Http\Controllers\SyrupsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,27 @@ use App\Http\Controllers\AlcoolListController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//Syrups Type of Routes
+/*Route::get(
+    '/cocktails',
+   [SyrupsController::class, 'index']
+)->name('cocktails.index');*/
+
+//Fruits Type of Routes
+/*Route::get(
+    '/cocktails',
+   [FruitsController::class, 'index']
+)->name('cocktails.index');*/
+
+
+//Softs Type of Routes
+Route::get(
+    '/cocktails',
+   [SoftsController::class, 'index']
+)->name('cocktails.index');
+ 
+
 // Alcool Type of Routes
 Route::get('/', function () {
     return view('welcome');

@@ -18,6 +18,7 @@ class AlcoolsController extends Controller
 
         return view('alcools.create');
     }
+    
     public function store(Request $request){
         // dd($request->get('name'));
        $type_alcools = new Alcool();
