@@ -63,7 +63,7 @@
                 @foreach($fruits as $fruit)
                     <tr>
                         <td>{{ $fruit->name }}</td>
-                        <td>{{ $fruit->image }} <img src="storage/images/{{$fruit->image}}"><img></td>
+                        <td>{{ $fruit->image }} <img src="{{asset('/storage/images/'.$fruit->image) }}"><img></td>
                         
 
                         <td>

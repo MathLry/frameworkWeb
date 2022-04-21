@@ -63,7 +63,7 @@
                 @foreach($glasses as $glass)
                     <tr>
                         <td>{{ $glass->name }}</td>
-                        <td>{{ $glass->image }}<img src="storage/images/{{$glass->image}}"><img></td>
+                        <td>{{ $glass->image }}<img src="{{ asset('/storage/images/'.$glass->image) }}"><img></td>
 
                         <td>
                             <form action="{{ route('glasses.edit', $glass->id) }}" method="GET">
