@@ -24,7 +24,7 @@ class FruitsController extends Controller
         $fruit->name = $request->get('name');
         $newImageName = time().'-'.$request->file('image')->getClientOriginalName();
         $fruit->image = $newImageName;
-        $request->file('image')->storeAs('images', $newImageName);
+        $request->file('image')->storeAs('imagesFruit', $newImageName);
         $fruit->save();
         return redirect()->route('fruits.index');
     }

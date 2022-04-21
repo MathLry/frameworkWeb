@@ -36,6 +36,11 @@
             display: block;
         }
 
+        img {
+            border-radius: 50%; 
+            height: 100px; 
+            width: 100px;
+        }
     </style>    
 </head>
 <body>
@@ -58,7 +63,7 @@
                 @foreach($glasses as $glass)
                     <tr>
                         <td>{{ $glass->name }}</td>
-                        <td>{{ $glass->image }}<img src="{{ asset('storage/images/'.$glass->image) }}" width= '100' height='100'></img></td>
+                        <td>{{ $glass->image }}<img src="storage/images/{{$glass->image}}"><img></td>
 
                         <td>
                             <form action="{{ route('glasses.edit', $glass->id) }}" method="GET">

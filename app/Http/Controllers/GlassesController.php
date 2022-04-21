@@ -23,7 +23,7 @@ class GlassesController extends Controller
         $glass->name = $request->get('name');
         $newImageName = time().'-'.$request->file('image')->getClientOriginalName();
         $glass->image = $newImageName;
-        $request->file('image')->storeAs('image', $newImageName);
+        $request->file('image')->storeAs('imagesGlass', $newImageName);
         $glass->save();
         return redirect()->route('glasses.index');
     }
@@ -40,7 +40,7 @@ class GlassesController extends Controller
         return redirect()->route('glasses.index');
     }
 
-    public function delete($request) {
+    public function delete(Request $request) {
         $glass = Glass::destroy($request->get('glass_id'));
         return redirect()->route('glasses.index');
     }
