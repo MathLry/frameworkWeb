@@ -15,8 +15,8 @@ use App\Models\cocktails;
 class SoftsController extends Controller
 {
     public function index() {
-        $syrups = Soft::all();
-        return view("syrups.index", compact('syrups'));
+        $softs = Soft::all();
+        return view("softs.index", compact('softs'));
     }
     // public function index(){
 

@@ -49,7 +49,7 @@
         <thead>
             <tr>
                 <th>name</th>
-                <th>image</th>
+            
                 <th>action</th>
             </tr>
         </thead>
@@ -58,7 +58,7 @@
                 @foreach($syrups as $syrup)
                     <tr>
                         <td>{{ $syrup->name }}</td>
-                        <td>{{ $syrup->image }}<img src="{{ asset('storage/images/'.$syrup->image) }}" width= '100' height='100'></img></td>
+                       
 
                         <td>
                             <form action="{{ route('syrups.edit', $syrup->id) }}" method="GET">

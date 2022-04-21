@@ -37,7 +37,7 @@
     <form action="{{ route('syrups.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input class="ms-3" type="text" name="name">
-        <input type="file" name="image">
+       
         <button type="submit">Send</button>
     </form>
    
