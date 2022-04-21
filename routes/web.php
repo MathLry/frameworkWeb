@@ -82,6 +82,68 @@ Route::post(
     [GlassesController::class, 'store']
 )->name('glasses.store');
 
+/*-------------------- SYRUPS --------------------*/
+Route::get(
+    '/syrups',
+    [SyrupsController::class, 'index']
+)->name('syrups.index');
+
+Route::get(
+    '/syrups/create',
+    [SyrupsController::class, 'create']
+)->name('syrups.create');
+
+Route::get(
+    '/syrups/{id}/edit',
+    [SyrupsController::class, 'edit']
+)->name('syrups.edit');
+
+Route::put(
+    '/syrups/{id}/update',
+    [SyrupsController::class, 'update']
+)->name('syrups.update');
+
+Route::delete(
+    '/syrups',
+    [SyrupsController::class, 'delete']
+)->name('syrups.delete');
+
+Route::post(
+    '/syrups',
+    [SyrupsController::class, 'store']
+)->name('syrups.store');
+
+/*-------------------- SOFTS --------------------*/
+Route::get(
+    '/softs',
+    [SoftsController::class, 'index']
+)->name('syrups.index');
+
+Route::get(
+    '/softs/create',
+    [SoftsController::class, 'create']
+)->name('softs.create');
+
+Route::get(
+    '/softs/{id}/edit',
+    [SoftsController::class, 'edit']
+)->name('softs.edit');
+
+Route::put(
+    '/softs/{id}/update',
+    [SoftsController::class, 'update']
+)->name('softs.update');
+
+Route::delete(
+    '/softs',
+    [SoftsController::class, 'delete']
+)->name('softs.delete');
+
+Route::post(
+    '/softs',
+    [SoftsController::class, 'store']
+)->name('softs.store');
+
 /*-------------------- COCKTAILS --------------------*/
 Route::get(
     '/cocktails',

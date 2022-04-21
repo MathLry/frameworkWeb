@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Glass extends Model
+class Syrup extends Model
 {
     use HasFactory;
 
-    protected $table = "glasses";
+    protected $table = "syrups";
     protected $fillable = [
         "name",
         "image"
     ];
 
-    public function pivotGlass() {
-        return $this->belongsToMany(PivotGlass::class);
+    public function pivotSyrup() {
+        return $this->belongsToMany(PivotSyrup::class);
     }
 }
