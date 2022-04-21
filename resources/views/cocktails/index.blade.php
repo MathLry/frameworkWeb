@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form method="post" action="{{ route('cocktails.storec')}}">
+    <form method="post" action="{{ route('cocktails.store')}}">
         <h2>Les Softs</h2>
             @csrf 
             <tbody>

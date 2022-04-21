@@ -45,8 +45,8 @@ Route::any(
 )->name('cocktails.index');
 Route::any(
     '/cocktails/store',
-   [SoftsController::class, 'storec']
-)->name('cocktails.storec');
+   [cocktailsController::class, 'store']
+)->name('cocktails.store');
 
 Route::get(
     '/listcocktails',

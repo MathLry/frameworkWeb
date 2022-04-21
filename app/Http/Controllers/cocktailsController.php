@@ -28,4 +28,13 @@ class cocktailsController extends Controller
          
         return view("cocktails.index", compact('softs','syrups', 'fruits', 'glasses', 'types_Of_Alcohol'));
     }
+    public function store(Request $request){
+        //dd($request->get('choix'));
+     $cocktails = new cocktails();
+      
+      $cocktails->name =implode(",",$request->get('choix'));
+   $cocktails->save();
+      return redirect()->route('cocktails.index');
+       
+   }
 }

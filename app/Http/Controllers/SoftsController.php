@@ -29,15 +29,7 @@ class SoftsController extends Controller
          
     //     return view("cocktails.index", compact('softs','syrups', 'fruits', 'glasses', 'types_Of_Alcohol'));
     // }
-    public function storec(Request $request){
-         //dd($request->get('choix'));
-      $cocktails = new cocktails();
-       
-       $cocktails->name =implode(",",$request->get('choix'));
-    $cocktails->save();
-       return redirect()->route('cocktails.index');
-        
-    }
+    
     public function create() {
         $softs = Soft::all();
         return view("softs.create", compact('softs'));
