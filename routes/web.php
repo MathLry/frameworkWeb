@@ -9,6 +9,9 @@ use App\Http\Controllers\AlcoolListController;
 use App\Http\Controllers\SoftsController;
 use App\Http\Controllers\SyrupsController;
 use App\Http\Controllers\cocktailsController;
+use App\Http\Controllers\FruitsController;
+use App\Http\Controllers\GlassesController;
+
 
 
 /*
@@ -38,17 +41,17 @@ use App\Http\Controllers\cocktailsController;
 //Softs Type of Routes
 Route::any(
     '/cocktails',
-   [SoftsController::class, 'index']
+   [cocktailsController::class, 'cocktail']
 )->name('cocktails.index');
 Route::any(
     '/cocktails/store',
-   [SoftsController::class, 'store']
-)->name('cocktails.store');
+   [SoftsController::class, 'storec']
+)->name('cocktails.storec');
 
 Route::get(
     '/listcocktails',
     [cocktailsController::class, 'index']
-)->name('cocktails.cocktail');
+)->middleware(['auth'])->name('cocktails.cocktail');
  
 
 // // Alcool Type of Routes
@@ -193,5 +196,130 @@ Route::put(
     '/alcool/list/{id}/update',
    [AlcoolListController::class, 'update']
 )->middleware(['auth'])->name('listAlcool.update');
+/*Fruit*/
+
+Route::get(
+    '/fruits',
+    [FruitsController::class, 'index']
+)->middleware(['auth'])->name('fruits.index');
+
+Route::get(
+    '/fruits/create',
+    [FruitsController::class, 'create']
+)->middleware(['auth'])->name('fruits.create');
+
+Route::get(
+    '/fruits/{id}/edit',
+    [FruitsController::class, 'edit']
+)->middleware(['auth'])->name('fruits.edit');
+
+Route::put(
+    '/fruits/{id}/update',
+    [FruitsController::class, 'update']
+)->middleware(['auth'])->name('fruits.update');
+
+Route::delete(
+    '/fruits',
+    [FruitsController::class, 'delete']
+)->middleware(['auth'])->name('fruits.delete');
+
+Route::post(
+    '/fruits',
+    [FruitsController::class, 'store']
+)->middleware(['auth'])->name('fruits.store');
+
+/*-------------------- GLASSES --------------------*/
+Route::get(
+    '/glasses',
+    [GlassesController::class, 'index']
+)->middleware(['auth'])->name('glasses.index');
+
+Route::get(
+    '/glasses/create',
+    [GlassesController::class, 'create']
+)->middleware(['auth'])->name('glasses.create');
+
+Route::get(
+    '/glasses/{id}/edit',
+    [GlassesController::class, 'edit']
+)->middleware(['auth'])->name('glasses.edit');
+
+Route::put(
+    '/glasses/{id}/update',
+    [GlassesController::class, 'update']
+)->middleware(['auth'])->name('glasses.update');
+
+Route::delete(
+    '/glasses',
+    [GlassesController::class, 'delete']
+)->middleware(['auth'])->name('glasses.delete');
+
+Route::post(
+    '/glasses',
+    [GlassesController::class, 'store']
+)->middleware(['auth'])->name('glasses.store');
+/*-------------------- SYRUPS --------------------*/
+Route::get(
+    '/syrups',
+    [SyrupsController::class, 'index']
+)->middleware(['auth'])->name('syrups.index');
+
+Route::get(
+    '/syrups/create',
+    [SyrupsController::class, 'create']
+)->middleware(['auth'])->name('syrups.create');
+
+Route::get(
+    '/syrups/{id}/edit',
+    [SyrupsController::class, 'edit']
+)->middleware(['auth'])->name('syrups.edit');
+
+Route::put(
+    '/syrups/{id}/update',
+    [SyrupsController::class, 'update']
+)->middleware(['auth'])->name('syrups.update');
+
+Route::delete(
+    '/syrups',
+    [SyrupsController::class, 'delete']
+)->middleware(['auth'])->name('syrups.delete');
+
+Route::post(
+    '/syrups',
+    [SyrupsController::class, 'store']
+)->middleware(['auth'])->name('syrups.store');
+
+/*-------------------- SOFTS --------------------*/
+Route::get(
+    '/softs',
+    [SoftsController::class, 'index']
+)->middleware(['auth'])->name('softs.index');
+
+Route::get(
+    '/softs/create',
+    [SoftsController::class, 'create']
+)->middleware(['auth'])->name('softs.create');
+
+Route::get(
+    '/softs/{id}/edit',
+    [SoftsController::class, 'edit']
+)->middleware(['auth'])->name('softs.edit');
+
+Route::put(
+    '/softs/{id}/update',
+    [SoftsController::class, 'update']
+)->middleware(['auth'])->name('softs.update');
+
+Route::delete(
+    '/softs',
+    [SoftsController::class, 'delete']
+)->middleware(['auth'])->name('softs.delete');
+
+Route::post(
+    '/softs',
+    [SoftsController::class, 'store']
+)->middleware(['auth'])->name('softs.store');
+
+
 require __DIR__.'/auth.php';
  

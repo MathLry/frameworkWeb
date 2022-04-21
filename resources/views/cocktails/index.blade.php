@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form method="post" action="{{ route('cocktails.store')}}">
+    <form method="post" action="{{ route('cocktails.storec')}}">
         <h2>Les Softs</h2>
             @csrf 
             <tbody>
@@ -19,7 +19,7 @@
                     @foreach ($softs as $soft)
                     <input type="checkbox" name="choix[]" value="{{ $soft->name}}">{{ $soft->name}}<br>
                     @endforeach
-                    <input type="submit"name="submit" id="button" value="ok" />
+                   
                 
                     
             @endif
@@ -62,6 +62,7 @@
                     @endforeach
             @endif
             </tbody>
+            <input type="submit"name="submit" id="button" value="Valider" />
     </form>
 </body>
 </html>

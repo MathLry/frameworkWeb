@@ -8,8 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Syrup extends Model
 {
     use HasFactory;
-    protected $table="syrups";
+
+    protected $table = "syrups";
     protected $fillable = [
-        "name"
+        "name",
+        "image"
     ];
+
+    public function pivotSyrup() {
+        return $this->belongsToMany(PivotSyrup::class);
+    }
 }

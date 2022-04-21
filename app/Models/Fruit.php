@@ -8,8 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Fruit extends Model
 {
     use HasFactory;
-    protected $table="fruits";
+
+    protected $table = "fruits";
     protected $fillable = [
-        "name"
+        "name",
+        "image"
     ];
+
+    public function pivotFruit() {
+        return $this->belongsToMany(PivotFruit::class);
+    }
 }

@@ -12,6 +12,11 @@
             <li><a href="{{ route('cocktails.index')}}">Personnaliser votre cocktail</a></li>
             <li><a href="{{ route('listAlcool.index')}}">Gérer la liste d'alcools</a></li>
             <li><a href="{{ route('alcools.index')}}">Gérer les types d'alcools</a></li>
+            <li><a href="{{ route('glasses.index')}}">Gérer la liste des verres</a></li>
+            <li><a href="{{ route('fruits.index')}}">Gérer la liste des fruits</a></li>
+            <li><a href="{{ route('syrups.index')}}">Gérer la liste des sirops</a></li>
+            <li><a href="{{ route('softs.index')}}">Gérer la liste des softs</a></li>
+
             <li><a href="{{ route('cocktails.cocktail')}}">Voir les cocktails reçu</a></li>
 
 
