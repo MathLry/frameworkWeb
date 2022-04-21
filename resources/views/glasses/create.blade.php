@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-    <h1>BLOG</H1>
+    <h1>Glasses</H1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('glasses.index') }}">List of glasses</a></li>

@@ -38,7 +38,7 @@
     </style>
 </head>
 <body>
-  
+  <h1>Softs</h1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('softs.create') }}">Add a soft</a></li>

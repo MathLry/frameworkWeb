@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
- 
+ <h1>Fruit</H1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('fruits.index') }}">List of Fruits</a></li>

@@ -38,7 +38,7 @@
     </style>
 </head>
 <body>
-    
+    <h1>Syrups</h1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('syrups.create') }}">Add a syrup</a></li>

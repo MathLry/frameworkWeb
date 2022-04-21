@@ -8,6 +8,7 @@
     <h1>Liste des types d'alcools</h1>
     <a href="{{ route('home') }}">Retour à l'accueil</a>
     <a href="{{route('listAlcool.create') }}">Ajouter une boisson </a>
+    
     <table border="2">
         <thead>
             <tr>

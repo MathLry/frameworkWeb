@@ -7,7 +7,7 @@
     <title>Document</title>
     <h1>Bienvenue dans la liste des cocktails reçu</h1>
     <table border="2" cellspacing="0" cellpadding="">
-    
+    <li><a href="{{ route('home') }}">Home</a></li>
     <thead>
             <tr>
                 <th>Id</th>

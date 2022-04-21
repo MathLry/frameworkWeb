@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <h1>Bienvenue dans la personnalisation de votre cocktails</h1>
-
+    <li><a href="{{ route('home') }}">Home</a></li>
 </head>
 <body>
     <form method="post" action="{{ route('cocktails.store')}}">
