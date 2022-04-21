@@ -21,9 +21,6 @@ class SyrupsController extends Controller
     public function store(Request $request) {
         $syrup = new Syrup();
         $syrup->name = $request->get('name');
-        $newImageName = time().'-'.$request->file('image')->getClientOriginalName();
-        $syrup->image = $newImageName;
-        $request->file('image')->storeAs('images', $newImageName);
         $syrup->save();
         return redirect()->route('syrups.index');
     }

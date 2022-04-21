@@ -27,7 +27,6 @@
     </style>
 </head>
 <body>
-    <h1>BLOG</H1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('syrups.index') }}">List of Syrups</a></li>

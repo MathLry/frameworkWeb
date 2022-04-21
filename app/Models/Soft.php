@@ -14,8 +14,4 @@ class Soft extends Model
         "name",
         "image"
     ];
-
-    public function pivotSoft() {
-        return $this->belongsToMany(PivotSoft::class);
-    }
 }

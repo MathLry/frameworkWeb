@@ -15,7 +15,4 @@ class Syrup extends Model
         "image"
     ];
 
-    public function pivotSyrup() {
-        return $this->belongsToMany(PivotSyrup::class);
-    }
 }

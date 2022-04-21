@@ -27,7 +27,6 @@
     </style>
 </head>
 <body>
-    <h1>BLOG</H1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('syrups.index') }}">List of Syrups</a></li>
@@ -37,7 +36,6 @@
     <form action="{{ route('syrups.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input class="ms-3" type="text" name="name">
-        <input type="file" name="image">
         <button type="submit">Send</button>
     </form>
    

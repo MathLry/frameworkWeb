@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pivot_fruit', function (Blueprint $table) {
-            $table->unsignedBigInteger('fruit_id');
-            $table->foreign('name')->references('id')->on('fruits');
+        Schema::create('softs', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pivot_fruit');
+        Schema::dropIfExists('softs');
     }
 };

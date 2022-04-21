@@ -38,7 +38,6 @@
     </style>
 </head>
 <body>
-    <h1>BLOG</H1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('softs.create') }}">Add a soft</a></li>
@@ -49,7 +48,6 @@
         <thead>
             <tr>
                 <th>name</th>
-                <th>image</th>
                 <th>action</th>
             </tr>
         </thead>
@@ -58,7 +56,6 @@
                 @foreach($softs as $soft)
                     <tr>
                         <td>{{ $soft->name }}</td>
-                        <td>{{ $soft->image }}<img src="{{ asset('storage/images/'.$soft->image) }}" width= '100' height='100'></img></td>
 
                         <td>
                             <form action="{{ route('softs.edit', $soft->id) }}" method="GET">

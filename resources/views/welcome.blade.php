@@ -23,6 +23,10 @@
         </style>
     </head>
     <body>
+    <h2>Fruits</h2>
+        <a href="{{ route('fruits.index') }}">List of fruits</a>
         
+        <h2>Glasses</h2>
+        <a href="{{ route('glasses.index') }}">List of glasses</a>
     </body>
 </html>

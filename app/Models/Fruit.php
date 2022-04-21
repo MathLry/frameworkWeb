@@ -14,8 +14,4 @@ class Fruit extends Model
         "name",
         "image"
     ];
-
-    public function pivotFruit() {
-        return $this->belongsToMany(PivotFruit::class);
-    }
 }

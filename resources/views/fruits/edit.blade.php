@@ -27,18 +27,17 @@
     </style>
 </head>
 <body>
-    <h1>BLOG</H1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('fruits.index') }}">List of Fruits</a></li>
     </ul>
     <h2>Change the name of a fruit</h1>
 
-    <form action="{{ route('fruits.update', $fruit->id) }}" method="POST">
-        @csrf
-        @method("PUT")
-        <input type="text" name="name" placeholder="name" value="{{ $fruit->name }}">
-        <button type="submit">Send</button>
-    </form>
+<form action="{{ route('fruits.update', $fruit->id) }}" method="POST">
+    @csrf
+    @method("PUT")
+    <input type="text" name="name" placeholder="name" value="{{ $fruit->name }}">
+    <button type="submit">Send</button>
+</form>
 </body>
 </html>

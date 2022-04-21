@@ -27,7 +27,6 @@
     </style>
 </head>
 <body>
-    <h1>BLOG</H1>
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('fruits.index') }}">List of Fruits</a></li>
@@ -40,6 +39,5 @@
         <input type="file" name="image">
         <button type="submit">Send</button>
     </form>
-   
 </body>
 </html>

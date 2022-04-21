@@ -14,8 +14,4 @@ class Glass extends Model
         "name",
         "image"
     ];
-
-    public function pivotGlass() {
-        return $this->belongsToMany(PivotGlass::class);
-    }
 }
