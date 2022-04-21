@@ -12,7 +12,6 @@ class Soft extends Model
     protected $table = "softs";
     protected $fillable = [
         "name",
-        "image"
     ];
 
     public function pivotSoft() {

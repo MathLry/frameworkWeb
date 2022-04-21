@@ -12,7 +12,7 @@ class Syrup extends Model
     protected $table = "syrups";
     protected $fillable = [
         "name",
-        "image"
+        
     ];
 
     public function pivotSyrup() {

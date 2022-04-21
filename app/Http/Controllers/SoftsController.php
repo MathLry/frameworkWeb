@@ -38,9 +38,9 @@ class SoftsController extends Controller
     public function store(Request $request) {
         $soft = new Soft();
         $soft->name = $request->get('name');
-        $newImageName = time().'-'.$request->file('image')->getClientOriginalName();
-        $soft->image = $newImageName;
-        $request->file('image')->storeAs('images', $newImageName);
+        // $newImageName = time().'-'.$request->file('image')->getClientOriginalName();
+        // $soft->image = $newImageName;
+        // $request->file('image')->storeAs('images', $newImageName);
         $soft->save();
         return redirect()->route('softs.index');
     }
