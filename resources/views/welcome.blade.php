@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <header>
     <h1>Bienvenue au Bar</h1>
-<header>
+
     <div class="navbar">
             <li><a href="{{ route('cocktails.index')}}">Personnaliser votre cocktail</a></li>
-            <li><a href="{{ route('listAlcool.index')}}">Notre menu</a></li>
-        <a href="#" class="btn-S-identifier">S'identifier</a>
+            <li><a href="{{ route('listAlcool.index')}}">Gérer la liste d'alcools</a></li>
+            <li><a href="{{ route('alcools.index')}}">Gérer les types d'alcools</a></li>
+            <li><a href="{{ route('cocktails.cocktail')}}">Voir les cocktails reçu</a></li>
+
+
+        <a href="/login" class="btn-S-identifier">S'identifier</a>
     <div>
         
     </header>
 </head>
 <body>
+  
     
 </body>
 </html>
@@ -235,4 +241,7 @@
             border: 0.5px solid lightgrey;
             width: 100%;
             padding-right: 40px;
+        }
+        h1{
+            color:white;
         }
