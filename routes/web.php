@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< Updated upstream
-=======
 use App\Http\Controllers\FruitsController;
 use App\Http\Controllers\GlassesController;
 use App\Http\Controllers\ImageUploadController;
->>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +18,9 @@ use App\Http\Controllers\ImageUploadController;
 
 Route::get('/', function () {
     return view('welcome');
-<<<<<<< Updated upstream
-});
-=======
 })->name('home');
 
+/*-------------------- FRUITS --------------------*/
 Route::get(
     '/fruits',
     [FruitsController::class, 'index']
@@ -56,6 +51,7 @@ Route::post(
     [FruitsController::class, 'store']
 )->name('fruits.store');
 
+/*-------------------- GLASSES --------------------*/
 Route::get(
     '/glasses',
     [GlassesController::class, 'index']
@@ -85,4 +81,9 @@ Route::post(
     '/glasses',
     [GlassesController::class, 'store']
 )->name('glasses.store');
->>>>>>> Stashed changes
+
+/*-------------------- COCKTAILS --------------------*/
+Route::get(
+    '/cocktails',
+    [CocktailsController::class, 'index']
+)->name('cocktails.index');

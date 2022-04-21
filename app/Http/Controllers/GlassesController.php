@@ -23,7 +23,7 @@ class GlassesController extends Controller
         $glass->name = $request->get('name');
         $newImageName = time().'-'.$request->file('image')->getClientOriginalName();
         $glass->image = $newImageName;
-        $request->file('image')->storeAs('images', $newImageName);
+        $request->file('image')->storeAs('image', $newImageName);
         $glass->save();
         return redirect()->route('glasses.index');
     }

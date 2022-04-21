@@ -16,6 +16,11 @@
             font-family: 'Nunito', sans-serif;
         }
 
+        body {
+            padding-inline: 100px;
+            padding-top: 50px;
+        }
+
         li {
             list-style-type: none;
         }

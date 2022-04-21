@@ -16,9 +16,26 @@
             font-family: 'Nunito', sans-serif;
         }
 
+        body {
+            padding-inline: 100px;
+            padding-top: 50px;
+        }
+
         li {
             list-style-type: none;
         }
+
+        td, th {
+            flex-direction: column;
+            border: medium solid;
+            padding-inline: 15px;
+            justify-content: center;
+        }
+
+        table {
+            display: block;
+        }
+
     </style>    
 </head>
 <body>
@@ -29,10 +46,9 @@
     </ul>
     <h2>List of glasses</h1>
 
-    <table class="p-2" border="1">
+    <table class="p-2">
         <thead>
             <tr>
-                <th>id</th>
                 <th>name</th>
                 <th>image</th>
                 <th>action</th>
@@ -42,12 +58,14 @@
             @if(!is_null($glasses) && !empty($glasses))
                 @foreach($glasses as $glass)
                     <tr>
-                        <td>{{ $glass->id }}</td>
                         <td>{{ $glass->name }}</td>
-                        <td>{{ $glass->image }}<img src="{{ asset('storage/images/' . $glass->image) }}"></img></td>
+                        <td>{{ $glass->image }}<img src="{{ asset('storage/images/'.$glass->image) }}" width= '100' height='100'></img></td>
 
                         <td>
-                            <a href="{{ route('glasses.edit', $glass->id) }}">Edit</a>
+                            <form action="{{ route('glasses.edit', $glass->id) }}" method="GET">
+                                @csrf
+                                <button type="submit">Edit</button>
+                            </form>
                             <form action="{{ route('glasses.delete') }}" method="POST">
                                 @csrf
                                 @method('DELETE')

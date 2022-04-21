@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit96c70ae03de50d618a05cd64f3b931df
+class ComposerStaticInit5dd9233feaf3b3e32e7942330d610bb0
 {
     public static $files = array (
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -2496,10 +2496,12 @@ class ComposerStaticInit96c70ae03de50d618a05cd64f3b931df
         'Illuminate\\Validation\\Rules\\DatabaseRule' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/DatabaseRule.php',
         'Illuminate\\Validation\\Rules\\Dimensions' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/Dimensions.php',
         'Illuminate\\Validation\\Rules\\Enum' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/Enum.php',
+        'Illuminate\\Validation\\Rules\\ExcludeIf' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/ExcludeIf.php',
         'Illuminate\\Validation\\Rules\\Exists' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/Exists.php',
         'Illuminate\\Validation\\Rules\\In' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/In.php',
         'Illuminate\\Validation\\Rules\\NotIn' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/NotIn.php',
         'Illuminate\\Validation\\Rules\\Password' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/Password.php',
+        'Illuminate\\Validation\\Rules\\ProhibitedIf' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/ProhibitedIf.php',
         'Illuminate\\Validation\\Rules\\RequiredIf' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/RequiredIf.php',
         'Illuminate\\Validation\\Rules\\Unique' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/Rules/Unique.php',
         'Illuminate\\Validation\\UnauthorizedException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Validation/UnauthorizedException.php',
@@ -5607,10 +5609,10 @@ class ComposerStaticInit96c70ae03de50d618a05cd64f3b931df
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit96c70ae03de50d618a05cd64f3b931df::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit96c70ae03de50d618a05cd64f3b931df::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit96c70ae03de50d618a05cd64f3b931df::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit96c70ae03de50d618a05cd64f3b931df::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5dd9233feaf3b3e32e7942330d610bb0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5dd9233feaf3b3e32e7942330d610bb0::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit5dd9233feaf3b3e32e7942330d610bb0::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit5dd9233feaf3b3e32e7942330d610bb0::$classMap;
 
         }, null, ClassLoader::class);
     }

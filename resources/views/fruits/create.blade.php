@@ -16,6 +16,11 @@
             font-family: 'Nunito', sans-serif;
         }
 
+        body {
+            padding-inline: 100px;
+            padding-top: 50px;
+        }
+
         li {
             list-style-type: none;
         }
@@ -31,8 +36,7 @@
 
     <form action="{{ route('fruits.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <input class="ms-3" type="text" name="name" placeholder="name">
-        
+        <input class="ms-3" type="text" name="name">
         <input type="file" name="image">
         <button type="submit">Send</button>
     </form>

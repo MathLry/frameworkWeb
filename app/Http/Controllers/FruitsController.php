@@ -15,7 +15,8 @@ class FruitsController extends Controller
     }
 
     public function create() {
-        return view("fruits.create");
+        $fruits = Fruit::all();
+        return view("fruits.create", compact('fruits'));
     }
 
     public function store(Request $request) {
@@ -42,9 +43,6 @@ class FruitsController extends Controller
 
     public function delete(Request $request) {
         $fruit = Fruit::destroy($request->get('fruit_id'));
-        if(Fruit::exists('\wamp64\www\frameworkWeb\storage\app\images\{newImageName}')) {
-            Fruit::delete('\wamp64\www\frameworkWeb\storage\app\images\{newImageName}');
-        }
         return redirect()->route('fruits.index');
     }
 }

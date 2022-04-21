@@ -5,7 +5,7 @@
 
 ### Énoncé
 
-Vous allez devoir faire un site web permettant de gérer des cocktails : 
+Créer un site web permettant de gérer des cocktails  
 
 ---
 #### TEMPS 1
@@ -31,7 +31,7 @@ Vous allez devoir faire un site web permettant de gérer des cocktails :
 
 ---
 #### TEMPS 3
-- gérer une liste de cocktails, qui seront in fine, une composition de tous les éléments cités ci-dessus
+- Gérer une liste de cocktails, qui seront in fine, une composition de tous les éléments cités ci-dessus
 
 ---
 #### ATTENTION 
@@ -51,7 +51,9 @@ Les temps 1, 2 et 3 sont à gérer en mode "backoffice", c'est-à-dire, ajoutabl
 - Lancer le serveur: `php artisan serve`
 - Si il y a un problème de dépendences dans le projet:</br>
     1- `composer du --ignore-platform-req=ext-fileinfo`</br>
-    2- `composer install --ignore-platform-req=ext-fileinfo`
+    2- `composer install --ignore-platform-req=ext-fileinfo`</br>
+    3- `composer du`</br>
+    4- `composer install`
 - Créer une migration: </br>
     1- `php artisan make:migration nom_du_fichier`</br>
     2- `php artisan migrate`</br>
@@ -61,18 +63,20 @@ Les temps 1, 2 et 3 sont à gérer en mode "backoffice", c'est-à-dire, ajoutabl
 
 ---
 #### Tâches à faire
-- Catégories : CRUD - Create, Read, Update, Delete
+- Catégories : CRUD (Create, Read, Update, Delete)
     - 1 table en BDD
     - 1 modèle pour gérer les catégories en BDD
     - 1 contrôleur spécifique pour les catégories
-    - les vues nécessaires
-    - les routes nécessaires
+    - Les vues nécessaires
+    - Les routes nécessaires
 
 ---
 ### Groupe
-- YASSER Youssouf mohamed - LEROY Mathias - Enzo Pinot
+- Yasser Youssouf Mohamed 
+- Mathias Leroy  
+- Enzo Pinot
 
 ---
 <p align="center">
-    <strong> YNOV NANTES - B2 - 2122</strong>
+    <strong> YNOV NANTES - B2 - 2022</strong>
 </p>
